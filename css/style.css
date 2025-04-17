@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 0.875rem;
+    font-family: 'Arimo';
+    line-height: 1.5;
+    color: black;
+    /* background: url('./mj.jpg'); background cũ */
+    /* background-repeat: no-repeat; */
+    background-size:cover; 
+    /* không cho bôi đen */
+    user-select: none;    
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+.homePage {
+    letter-spacing: 1.5px;
+    font-family: 'Kanit';
+    margin: 0 0 0.75rem 5rem;
+    text-transform: capitalize;
+    line-height: 1.25;
+    font-size: 2.5rem;
+    color: black;
+}
+.navbar {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background:rgba(0, 0, 0, 0);
+    position: relative;
+    z-index: 1;
+}
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+.nav-toggle {
+    font-size: 1.8rem;
+    color: black;
+    background: transparent ;
+    border-color: transparent;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    margin-right: 5rem;
+}
+.nav-toggle:hover {
+    color: black;
+    transform: rotate(90deg);
+}
+.shopping-cart {
+    background: transparent ;
+    border-color: transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: 0px;
+    color: black;
+}
+.storage{
+    background: transparent ;
+    border-color: transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-style: bold;
+    color: black;
+}
+.content-h1 {
+    display: flex;
+    justify-content: center;
+}
+.content-h1 h1 {
+    padding-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    font-style:italic;
+}
+/* thanh tìm kiếm */
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+}
+.input {
+    width: 400px;
+    height: 40px;
+    line-height: 200px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+}
+.input::placeholder {
+    color: #9e9ea7;
+}
+.input:focus, input:hover {
+    outline: none;
+    border-color: rgba(14, 5, 8, 0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(122, 114, 117, 0.1);
+}
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+}
+
+/* home, shop, about, contact */
+.links a {
+    color: black;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.05rem;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: 0.3s all linear;
+}
+.links a:hover {
+    color: white;
+    background: black;
+    padding-left: 1.5rem;
+}
+.links {
+    height: 0;
+    overflow: hidden;
+    transition: 0.2s all linear;
+}
+.show-links {
+    height: 15rem;
+}
+
+/* login, signup */
+.login-btn,.signup-btn {
+    background: transparent ;
+    border-color: transparent;
+    font-size: 1rem;
+    cursor: pointer;
+    font-style: bold;
+    color: black;
+    border: 1px solid black;
+    margin: 4px;
+    padding : 5px 8px 5px 8px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+.signup-btn {
+    background: #353b48;
+    color: white;
+}
+
+.signup-btn:hover {
+    background-color: black;
+}
+.login-btn:active,
+.signup-btn:active {
+    transform: scale(0.9);
+}
+.login-btn a {
+    color: black;
+}
+.signup-btn a {
+    color: white;
+}
+/* slick slider */
+.image-slider {
+    padding-bottom: 50px;
+    margin-top: 30px;
+}
+.image {
+    height: 500px;
+    margin-bottom: 0px;
+}
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.slick-initialized .slick-slide {
+    margin: 0 10px;
+}
+/* giới thiệu trend */
+.ctn-items {
+    margin: 20px 0 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60vh;
+    grid-gap: 8px;
+    position: relative;
+}
+.item {
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+}
+.grid-1 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+}
+.shoes-front {
+    height: 60vh;
+    border-radius: 20px;
+}
+.content-card h1 {
+    margin-top: 20px;
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+}
+.content-card p {
+    margin: 20px 0 0 12px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+.item:hover {
+    transform: translateY(-7px); 
+    box-shadow: rgba(4, 4, 4, 0.4) 0px 5px, rgba(99, 97, 98, 0.3) 0px 10px, rgba(136, 129, 133, 0.2) 0px 15px, rgba(234, 226, 231, 0.1) 0px 20px, rgba(251, 251, 251, 0.05) 0px 25px;
+} 
+
+/* vài sản phẩm đg có trên sàn */
+.title-clock {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    text-align: center;
+    align-items: center;
+}  
+
+h3 {
+    padding-top: 5px;
+    width: 150px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    font-style:italic;
+    font-size: 25px;
+    border: 1px solid black;
+    z-index: 100;
+}
+.nature {
+    width: 150px;
+    height: 40px;
+    background:
+        radial-gradient(circle 25px at top right, #ffd738 40%,#0000 ),
+        #4dbefa;
+    position: relative;
+    overflow:hidden;
+}
+.nature:before,
+.nature:after{  
+    content:"";
+    position:absolute;
+    top:4px;
+    left:-40px;
+    width:36px;
+    height:20px;
+    --c: radial-gradient(farthest-side,#fff 96%,#0000);
+    background: 
+        var(--c) 100% 100% /30% 60%, 
+        var(--c) 70% 0 /50% 100%, 
+        var(--c) 0 100% /36% 68%, 
+        var(--c) 27% 18% /26% 40%,
+        linear-gradient(#fff 0 0) bottom/67% 58%;
+    background-repeat: no-repeat;
+    animation:n10 4s linear infinite;
+}
+.nature:after {
+    top:15px;
+    --l:200%;
+}
+
+@keyframes n10{
+    100% {left:var(--l,105%)}
+}
+.time-cd {
+    padding: 15px 0 0 20px;
+    font-size: 20px;
+    font-family: 'Arimo', sans-serif;
+}
+.random-items {
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    background-image: url("../image/bg3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 50%;
+    background-position-x: 20%;
+}
+.myCard {
+    margin-top: 50px;
+    width: 260px;
+    height: 400px;
+    perspective: 1000px;
+    border-radius: 20px;
+}
+.myCard:hover {
+    transform: scale(1.1);
+}
+.shoes-random {
+    height: 250px;
+}
+.innerCard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+  
+.flipCard {
+    transform: rotateY(180deg);
+}
+  
+.frontSide,
+.backSide {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* border: 1px solid rgba(255, 255, 255, 0.8); */
+    border-radius: 20px;
+    font-weight: 700;
+}
+  
+.frontSide,
+.frontSide::before {
+    background-image: url("https://i.pinimg.com/564x/06/1d/e3/061de37a4b675c29a22f3114f24e3484.jpg");
+    background-size: cover;
+    background-position-y: 65%;
+}
+  
+.backSide,
+.backSide::before {
+    /* background-image: url("https://i.pinimg.com/564x/cb/f3/6b/cbf36b0c843d74572526f482d0262cfd.jpg"); */
+    background-size: cover;
+    background-position-y: 70%;
+    background-color: white;
+}
+  
+.backSide {
+    transform: rotateY(180deg);
+}
+  
+.frontSide::before,
+.backSide::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    /* width: 105%;
+    height: 105%; */
+    position: absolute;
+    z-index: -1;
+    border-radius: 1em;
+    /* filter: blur(8px); */
+}
+.backSide h1 {
+    color: black;
+    font-size: 20px;
+}
+
+.backSide p {
+    color: black;
+    font-size: 19px;
+}
+/* upcomming */
+.fixing {
+    height: 60vh;
+}
