@@ -1,38 +1,48 @@
-// src/main/java/com/example/demo/model/Product.java
+package com.example.backend.model;
 
-package com.example.demo.model;
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "products")
 public class Product {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
-    private Double price;
+    private int price;
 
-    public Product() {
-    }
+    // Constructors
+    public Product() {}
 
-    public Product(Long id, String name, Double price) {
-        this.id = id;
+    public Product(String name, int price) {
         this.name = name;
         this.price = price;
     }
 
-    // getters và setters
+    // Getters & Setters
     public Long getId() {
         return id;
     }
-    public void setId(Long id) {
-        this.id = id;
-    }
+
     public String getName() {
         return name;
     }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
-    public Double getPrice() {
-        return price;
-    }
-    public void setPrice(Double price) {
+
+    public void setPrice(int price) {
         this.price = price;
     }
 }

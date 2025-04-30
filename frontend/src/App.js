@@ -1,18 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from 'react';
+import ProductList from './components/ProductList';
 
 function App() {
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    fetch("http://localhost:8080/hello")
-      .then((response) => response.text())
-      .then((data) => setMessage(data));
-  }, []);
-
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>React + Spring Boot</h1>
-      <h2>{message}</h2>
+    <div className="App">
+      <h1>Trang bán hàng</h1>
+      <ProductList />
     </div>
   );
 }
